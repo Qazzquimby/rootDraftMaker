@@ -50,12 +50,14 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: Content
+      - name: Print directory structure
+        run: |
+          ls -R
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            RootDraftMakerWindows.zip
-            RootDraftMakerMac.zip
-            Content.zip
+            RootDraftMakerWindows.exe
+            RootDraftMakerMac
             content.json
           tag_name: ${{ github.event.inputs.tag }}

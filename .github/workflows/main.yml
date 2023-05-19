@@ -1,0 +1,28 @@
+# on windows, build exe, copy to directory, copy in content.json file, zip, upload
+
+jobs:
+  windows-build:
+    runs-on: windows-latest
+    steps:
+      - name: Windows Exe
+        uses: sayyid5416/pyinstaller@v1
+        with:
+          python_ver: '3.11'
+          spec: 'main.spec'
+          upload_exe_with_name: 'RootDraftMaker'
+          options: --onefile, --name "RootDraftMaker", --windowed,
+
+      - name: Copy to directory
+        run: |
+          mkdir -p ./dist/tozip
+          cp ./dist/RootDraftMaker.exe ./dist/tozip
+          cp ./content.json ./dist/tozip
+
+      - name: Zip
+        uses:
+          actions/upload-artifact@v2
+        with:
+          name: RootDraftMakerWindows
+          path: ./dist/tozip
+
+

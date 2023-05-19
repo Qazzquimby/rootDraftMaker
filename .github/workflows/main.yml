@@ -17,16 +17,23 @@ jobs:
           upload_exe_with_name: 'RootDraftMaker'
           options: --onefile, --name "RootDraftMaker", --windowed,
 
-      - name: Copy to directory
-        run: |
-          mkdir -p ./dist/tozip
-          cp ./dist/RootDraftMaker.exe ./dist/tozip
-          cp ./content.json ./dist/tozip
+#      - name: Copy to directory
+#        run: |
+#          mkdir -p ./dist/tozip
+#          cp ./dist/RootDraftMaker.exe ./dist/tozip
+#          cp ./content.json ./dist/tozip
+#
+#      - name: Zip
+#        uses:
+#          actions/upload-artifact@v2
+#        with:
+#          name: RootDraftMakerWindows
+#          path: ./dist/tozip
 
-      - name: Zip
-        uses:
-          actions/upload-artifact@v2
+      - name: Make Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: RootDraftMakerWindows
-          path: ./dist/tozip
-
+          files: |
+            ./dist/RootDraftMaker.exe
+            ./content.json
+          tag_name: ${{ github.ref }} Windows

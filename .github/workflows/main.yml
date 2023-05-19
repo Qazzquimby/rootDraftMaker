@@ -1,4 +1,9 @@
-# on windows, build exe, copy to directory, copy in content.json file, zip, upload
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   windows-build:

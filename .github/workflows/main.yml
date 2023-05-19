@@ -61,7 +61,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            RootDraftMakerWindows.exe
-            RootDraftMakerMac.exe
-            Content/content.json
+            ./RootDraftMakerWindows.exe
+            ./RootDraftMakerMac.exe
+            ./content.json
           tag_name: ${{ github.event.inputs.tag }}

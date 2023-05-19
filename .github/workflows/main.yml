@@ -18,25 +18,49 @@ jobs:
           spec: 'main.py'
           upload_exe_with_name: 'RootDraftMaker'
           options: --onefile, --name "RootDraftMaker", --windowed,
+      - name: Upload Exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: RootDraftMakerWindows
+          path: ./dist/RootDraftMaker.exe
+      - name: Upload content
+        uses: actions/upload-artifact@v2
+        with:
+          name: Content
+          path: ./content.json
 
-#      - name: Copy to directory
-#        run: |
-#          mkdir -p ./dist/tozip
-#          cp ./dist/RootDraftMaker.exe ./dist/tozip
-#          cp ./content.json ./dist/tozip
-#
-#      - name: Zip
-#        uses:
-#          actions/upload-artifact@v2
-#        with:
-#          name: RootDraftMakerWindows
-#          path: ./dist/tozip
+  macos-build:
+    runs-on: macos-latest
+    steps:
+      - name: Mac Exe
+        uses: sayyid5416/pyinstaller@v1
+        with:
+          python_ver: '3.11'
+          spec: 'main.py'
+          upload_exe_with_name: 'RootDraftMaker'
+          options: --onefile, --name "RootDraftMaker", --windowed,
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+            name: RootDraftMakerMac
+            path: ./dist/RootDraftMaker.exe
 
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Windows Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: RootDraftMakerWindows
+      - name: Get Mac Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: RootDraftMakerMac
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ./dist/RootDraftMaker.exe
-            ./content.json
-          body: WINDOWS
+            RootDraftMakerWindows/RootDraftMaker.exe
+            RootDraftMakerMac/RootDraftMaker.exe
+            Content/content.json
           tag_name: ${{ github.event.inputs.tag }}

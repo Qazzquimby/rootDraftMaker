@@ -16,13 +16,13 @@ jobs:
         with:
           python_ver: '3.11'
           spec: 'main.py'
-          upload_exe_with_name: 'RootDraftMaker'
+          upload_exe_with_name: 'RootDraftMakerWindows.exe'
           options: --onefile, --name "RootDraftMaker", --windowed,
-      - name: Upload Exe
-        uses: actions/upload-artifact@v2
-        with:
-          name: RootDraftMakerWindows
-          path: ./dist/RootDraftMaker.exe
+#      - name: Upload Exe
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: RootDraftMakerWindows
+#          path: ./dist/RootDraftMaker.exe
       - name: Upload content
         uses: actions/upload-artifact@v2
         with:
@@ -37,13 +37,13 @@ jobs:
         with:
           python_ver: '3.11'
           spec: 'main.py'
-          upload_exe_with_name: 'RootDraftMaker'
+          upload_exe_with_name: 'RootDraftMakerMac.exe'
           options: --onefile, --name "RootDraftMaker", --windowed,
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2
-        with:
-            name: RootDraftMakerMac
-            path: ./dist/RootDraftMaker.exe
+#      - name: Upload a Build Artifact
+#        uses: actions/upload-artifact@v2
+#        with:
+#            name: RootDraftMakerMac
+#            path: ./dist/RootDraftMaker.exe
 
   release:
     needs: [windows-build, macos-build]
@@ -52,16 +52,16 @@ jobs:
       - name: Get Windows Artifact
         uses: actions/download-artifact@v2
         with:
-          name: RootDraftMakerWindows
+          name: RootDraftMakerWindows.exe
       - name: Get Mac Artifact
         uses: actions/download-artifact@v2
         with:
-          name: RootDraftMakerMac
+          name: RootDraftMakerMac.exe
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            RootDraftMakerWindows/RootDraftMaker.exe
-            RootDraftMakerMac/RootDraftMaker.exe
+            RootDraftMakerWindows.exe
+            RootDraftMakerMac.exe
             Content/content.json
           tag_name: ${{ github.event.inputs.tag }}

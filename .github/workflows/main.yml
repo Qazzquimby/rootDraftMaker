@@ -36,5 +36,4 @@ jobs:
           files: |
             ./dist/RootDraftMaker.exe
             ./content.json
-          tag_name: ${{ github.ref }}
           body: WINDOWS

@@ -16,13 +16,8 @@ jobs:
         with:
           python_ver: '3.11'
           spec: 'main.py'
-          upload_exe_with_name: 'RootDraftMakerWindows.exe'
+          upload_exe_with_name: 'RootDraftMakerWindows'
           options: --onefile, --name "RootDraftMaker", --windowed,
-#      - name: Upload Exe
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: RootDraftMakerWindows
-#          path: ./dist/RootDraftMaker.exe
       - name: Upload content
         uses: actions/upload-artifact@v2
         with:
@@ -37,14 +32,8 @@ jobs:
         with:
           python_ver: '3.11'
           spec: 'main.py'
-          upload_exe_with_name: 'RootDraftMakerMac.exe'
+          upload_exe_with_name: 'RootDraftMakerMac'
           options: --onefile, --name "RootDraftMaker", --windowed,
-#      - name: Upload a Build Artifact
-#        uses: actions/upload-artifact@v2
-#        with:
-#            name: RootDraftMakerMac
-#            path: ./dist/RootDraftMaker.exe
-
   release:
     needs: [windows-build, macos-build]
     runs-on: ubuntu-latest
@@ -52,16 +41,16 @@ jobs:
       - name: Get Windows Artifact
         uses: actions/download-artifact@v2
         with:
-          name: RootDraftMakerWindows.exe
+          name: RootDraftMakerWindows
       - name: Get Mac Artifact
         uses: actions/download-artifact@v2
         with:
-          name: RootDraftMakerMac.exe
+          name: RootDraftMakerMac
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ./RootDraftMakerWindows.exe
-            ./RootDraftMakerMac.exe
-            ./content.json
+            RootDraftMakerWindows
+            RootDraftMakerMac
+            Content
           tag_name: ${{ github.event.inputs.tag }}

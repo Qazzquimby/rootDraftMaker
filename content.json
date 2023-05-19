@@ -1,0 +1,329 @@
+{
+  "factions": {
+    "red": [
+      {
+        "name": "Marquise de Cat",
+        "score": 0,
+        "type": "Marquise"
+      },
+      {
+        "name": "Eyrie Dynasties",
+        "score": 0,
+        "type": "Eyrie"
+      },
+      {
+        "name": "Underground Duchy",
+        "score": -1
+      },
+      {
+        "name": "Lord of the Hundreds",
+        "score": 1
+      },
+      {
+        "name": "Keepers in Iron",
+        "score": 0
+      },
+      {
+        "name": "Workshop Marquis",
+        "score": -2,
+        "type": "Marquise"
+      },
+      {
+        "name": "Eyrie's End",
+        "score": -2,
+        "type": "Eyrie"
+      },
+      {
+        "name": "Marquistador",
+        "score": -2,
+        "type": "Marquise"
+      },
+      {
+        "name": "Warrior's Wake",
+        "score": -1
+      }
+    ],
+    "grey": [
+      {
+        "name": "Woodland Alliance",
+        "score": 0,
+        "type": "Alliance"
+      },
+      {
+        "name": "Vagabond1",
+        "score": 1
+      },
+      {
+        "name": "Vagabond2",
+        "score": 0
+      },
+      {
+        "name": "Riverfolk Company",
+        "score": 0
+      },
+      {
+        "name": "Lizard Cult",
+        "score": 1
+      },
+      {
+        "name": "Corvid Conspiracy",
+        "score": 0
+      },
+      {
+        "name": "Winged Menace",
+        "score": -1
+      },
+      {
+        "name": "Croaker's Coven",
+        "score": -1
+      },
+      {
+        "name": "Spinners of Mercy",
+        "score": -2
+      },
+      {
+        "name": "Black Creek Pirates ii",
+        "score": -2
+      },
+      {
+        "name": "Noxious Battery",
+        "score": -2
+      },
+      {
+        "name": "Old Man Tinker",
+        "score": -2
+      },
+      {
+        "name": "Necropossums",
+        "score": -1
+      },
+      {
+        "name": "Arachnid Association ii",
+        "score": -2
+      },
+      {
+        "name": "Bone Patrol",
+        "score": -2
+      },
+      {
+        "name": "Woodland Revolution",
+        "score": -2,
+        "type": "Alliance"
+      },
+      {
+        "name": "Dove Corps ii",
+        "score": 0
+      },
+      {
+        "name": "Voracious Wyrm",
+        "score": -2
+      },
+      {
+        "name": "Snow Kingdom ii",
+        "score": -2
+      },
+      {
+        "name": "Black Paw Bandits",
+        "score": -2
+      },
+      {
+        "name": "Blackguard",
+        "score": -2
+      },
+      {
+        "name": "Chameleander",
+        "score": 0
+      },
+      {
+        "name": "Cirque du Goat",
+        "score": -2
+      },
+      {
+        "name": "Ooze",
+        "score": -2
+      },
+      {
+        "name": "Order of the Forest",
+        "score": -2
+      },
+      {
+        "name": "Twelve Colonies",
+        "score": -2
+      },
+      {
+        "name": "United Colonies",
+        "score": -2
+      },
+      {
+        "name": "Triumvirate of Fury",
+        "score": -2
+      },
+      {
+        "name": "The Lost Powers",
+        "score": -2
+      },
+      {
+        "name": "Long Patrol",
+        "score": -2
+      },
+      {
+        "name": "Feudal Federation",
+        "score": -2
+      }
+    ]
+  },
+  "vagabonds": [
+    {
+      "name": "Tinker",
+      "score": 0
+    },
+    {
+      "name": "Adventurer",
+      "score": 0
+    },
+    {
+      "name": "Ronin",
+      "score": 0
+    },
+    {
+      "name": "Ranger",
+      "score": 0
+    },
+    {
+      "name": "Thief",
+      "score": 0
+    },
+    {
+      "name": "Harrier",
+      "score": 0
+    },
+    {
+      "name": "Scoundrel",
+      "score": 0
+    },
+    {
+      "name": "Arbiter",
+      "score": 0
+    },
+    {
+      "name": "Vagrant",
+      "score": 0
+    },
+    {
+      "name": "Grouch",
+      "score": -2
+    },
+    {
+      "name": "Bard",
+      "score": -1
+    },
+    {
+      "name": "Barkeep",
+      "score": -2
+    },
+    {
+      "name": "Blacksmith",
+      "score": -2
+    },
+    {
+      "name": "Berserker",
+      "score": -2
+    },
+    {
+      "name": "Zealot",
+      "score": -2
+    },
+    {
+      "name": "Swindler",
+      "score": -2
+    }
+  ],
+  "maps": [
+    {
+      "name": "Autumn",
+      "score": 1
+    },
+    {
+      "name": "Winter",
+      "score": 0
+    },
+    {
+      "name": "Lake",
+      "score": 0
+    },
+    {
+      "name": "Mountain",
+      "score": 0
+    },
+    {
+      "name": "Gorge",
+      "score": -1
+    },
+    {
+      "name": "Australia",
+      "score": -2
+    },
+    {
+      "name": "Treasure Island",
+      "score": -2
+    },
+    {
+      "name": "Wasteland",
+      "score": -3
+    },
+    {
+      "name": "Deep Woods",
+      "score": -2
+    },
+    {
+      "name": "Legends",
+      "score": -2
+    },
+    {
+      "name": "Tidal Flats",
+      "score": -2
+    },
+    {
+      "name": "Taiga",
+      "score": -2
+    },
+    {
+      "name": "River Town",
+      "score": -2
+    },
+    {
+      "name": "Blighted City",
+      "score": -2
+    }
+  ],
+  "decks": [
+    {
+      "name": "Base",
+      "score": -1
+    },
+    {
+      "name": "Exiles and Partisans",
+      "score": 1
+    },
+    {
+      "name": "Dawn and Dusk",
+      "score": 1
+    },
+    {
+      "name": "Master Deck",
+      "score": 0
+    },
+    {
+      "name": "Dark Deck",
+      "score": -1
+    },
+    {
+      "name": "Upstarts and Renegades",
+      "score": -1
+    },
+    {
+      "name": "Sorcery of the Enchanted Woods",
+      "score": -1
+    }
+  ]
+}

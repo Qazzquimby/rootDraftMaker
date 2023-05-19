@@ -13,7 +13,7 @@ jobs:
         uses: sayyid5416/pyinstaller@v1
         with:
           python_ver: '3.11'
-          spec: 'main.spec'
+          spec: 'main.py'
           upload_exe_with_name: 'RootDraftMaker'
           options: --onefile, --name "RootDraftMaker", --windowed,
 
@@ -29,5 +29,4 @@ jobs:
         with:
           name: RootDraftMakerWindows
           path: ./dist/tozip
-
 

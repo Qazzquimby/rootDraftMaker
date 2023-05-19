@@ -30,7 +30,7 @@ jobs:
           path: ./content.json
 
   macos-build:
-    runs-on: macos-latest
+    runs-on: macos-13 beta
     steps:
       - name: Mac Exe
         uses: sayyid5416/pyinstaller@v1
@@ -46,6 +46,7 @@ jobs:
             path: ./dist/RootDraftMaker.exe
 
   release:
+    needs: [windows-build, macos-build]
     runs-on: ubuntu-latest
     steps:
       - name: Get Windows Artifact

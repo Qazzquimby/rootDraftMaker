@@ -1,9 +1,11 @@
 name: Build and Release
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to create revision'
+        required: true
 
 jobs:
   windows-build:
@@ -37,3 +39,4 @@ jobs:
             ./dist/RootDraftMaker.exe
             ./content.json
           body: WINDOWS
+          tag_name: ${{ github.event.inputs.tag }}

@@ -46,11 +46,16 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: RootDraftMakerMac
+      - name: Get Content Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: Content
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            RootDraftMakerWindows
-            RootDraftMakerMac
-            Content
+            RootDraftMakerWindows.zip
+            RootDraftMakerMac.zip
+            Content.zip
+            content.json
           tag_name: ${{ github.event.inputs.tag }}

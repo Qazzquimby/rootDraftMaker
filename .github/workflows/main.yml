@@ -30,7 +30,7 @@ jobs:
           path: ./content.json
 
   macos-build:
-    runs-on: macos-13 beta
+    runs-on: macos-13
     steps:
       - name: Mac Exe
         uses: sayyid5416/pyinstaller@v1

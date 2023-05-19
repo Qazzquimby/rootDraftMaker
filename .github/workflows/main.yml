@@ -30,10 +30,11 @@ jobs:
 #          name: RootDraftMakerWindows
 #          path: ./dist/tozip
 
-      - name: Make Release
+      - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
             ./dist/RootDraftMaker.exe
             ./content.json
-          tag_name: ${{ github.ref }} Windows
+          tag_name: ${{ github.ref }}
+          body: WINDOWS

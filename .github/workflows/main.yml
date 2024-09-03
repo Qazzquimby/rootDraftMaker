@@ -39,15 +39,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Windows Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: RootDraftMakerWindows
       - name: Get Mac Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: RootDraftMakerMac
       - name: Get Content Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Content
       - name: Print directory structure
